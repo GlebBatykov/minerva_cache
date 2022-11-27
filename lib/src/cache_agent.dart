@@ -59,7 +59,8 @@ class CacheAgent extends Agent {
         var expiration = data['expiration'] as Duration?;
 
         if (key != null) {
-          _cache.set(key, value, expiration: expiration);
+          _cache.set(key, value,
+              expirationSetting: ExpirationSetting(expiration: expiration));
         }
 
         break;
@@ -78,10 +79,20 @@ class CacheAgent extends Agent {
       case ('change_expiration'):
         var key = data['key'] as String?;
 
-        var expiration = data['expiration'] as Duration?;
+        var expiration = data['expiration_setting'] as ExpirationSetting?;
 
         if (key != null && expiration != null) {
           _cache.changeExpiration(key, expiration);
+        }
+
+        break;
+      case ('update'):
+        var key = data['key'] as String?;
+
+        var value = data['value'];
+
+        if (key != null) {
+          _cache.update(key, value);
         }
 
         break;

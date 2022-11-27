@@ -1,6 +1,6 @@
 library minerva_cache;
 
-import 'package:cache/cache.dart';
+import 'package:mcache/mcache.dart';
 import 'package:minerva/minerva.dart';
 
 part 'src/cache_agent.dart';
