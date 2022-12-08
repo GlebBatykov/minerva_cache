@@ -1,5 +1,6 @@
 part of minerva_cache;
 
+/// Implements an agent for storing the cache.
 class CacheAgent extends Agent {
   final bool _deleteOnExpire;
 

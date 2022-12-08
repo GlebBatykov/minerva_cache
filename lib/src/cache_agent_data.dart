@@ -1,5 +1,6 @@
 part of minerva_cache;
 
+/// Agent data, to create an agent to store the cache.
 class CacheAgentData extends AgentData {
   CacheAgentData(
       {String name = 'cache',
