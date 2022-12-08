@@ -1,4 +1,4 @@
-part of minerva_cache;
+part of minerva_mcache;
 
 /// Agent data, to create an agent to store the cache.
 class CacheAgentData extends AgentData {

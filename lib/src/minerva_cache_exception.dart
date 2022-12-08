@@ -1,4 +1,4 @@
-part of minerva_cache;
+part of minerva_mcache;
 
 class MinervaCacheException implements Exception {
   final String? message;

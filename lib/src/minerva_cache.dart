@@ -1,4 +1,4 @@
-part of minerva_cache;
+part of minerva_mcache;
 
 /// Used for access to cached values in agent.
 class MinervaCache {
@@ -29,6 +29,7 @@ class MinervaCache {
     _connector.cast('delete', data: {'key': key});
   }
 
+  /// Changes value expiration by [key].
   void changeExpiration(String key, Duration expiration) {
     _connector.cast('change_expiration',
         data: {'key': key, 'expiration': expiration});
@@ -39,7 +40,7 @@ class MinervaCache {
     return _connector.call('has', data: {'key': key}) as bool;
   }
 
-  ///
+  /// Clears all values.
   void clear() {
     _connector.cast('clear');
   }

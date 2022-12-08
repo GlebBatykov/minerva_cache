@@ -1,4 +1,4 @@
-part of minerva_cache;
+part of minerva_mcache;
 
 /// Implements an agent for storing the cache.
 class CacheAgent extends Agent {
