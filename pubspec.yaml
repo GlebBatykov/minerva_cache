@@ -1,13 +1,13 @@
-name: minerva_cache
+name: minerva_mcache
 description: A sample command-line application.
 version: 1.0.0
-# homepage: https://www.example.com
+homepage: https://github.com/GlebBatykov/minerva_mcache
 
 environment:
   sdk: ">=2.17.5 <3.0.0"
 
 dependencies:
-  minerva: ^0.2.8
+  minerva: ^0.2.9
   mcache: ^1.0.2
 
 dev_dependencies:
