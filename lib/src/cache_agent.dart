@@ -23,7 +23,7 @@ class CacheAgent extends Agent {
   dynamic call(String action, Map<String, dynamic> data) {
     switch (action) {
       case ('get'):
-        var key = data['key'] as String?;
+        final key = data['key'] as String?;
 
         if (key != null) {
           return _cache[key];
@@ -31,7 +31,7 @@ class CacheAgent extends Agent {
           break;
         }
       case ('delete'):
-        var key = data['key'] as String?;
+        final key = data['key'] as String?;
 
         if (key != null) {
           return _cache.delete(key);
@@ -39,7 +39,7 @@ class CacheAgent extends Agent {
           break;
         }
       case ('has'):
-        var key = data['key'] as String?;
+        final key = data['key'] as String?;
 
         if (key != null) {
           return _cache.has(key);
@@ -53,11 +53,11 @@ class CacheAgent extends Agent {
   void cast(String action, Map<String, dynamic> data) {
     switch (action) {
       case ('set'):
-        var key = data['key'] as String?;
+        final key = data['key'] as String?;
 
-        var value = data['value'];
+        final value = data['value'];
 
-        var expiration = data['expiration'] as Duration?;
+        final expiration = data['expiration'] as Duration?;
 
         if (key != null) {
           _cache.set(key, value,
@@ -66,7 +66,7 @@ class CacheAgent extends Agent {
 
         break;
       case ('delete'):
-        var key = data['key'] as String?;
+        final key = data['key'] as String?;
 
         if (key != null) {
           _cache.delete(key);
@@ -78,9 +78,9 @@ class CacheAgent extends Agent {
 
         break;
       case ('change_expiration'):
-        var key = data['key'] as String?;
+        final key = data['key'] as String?;
 
-        var expiration = data['expiration_setting'] as ExpirationSetting?;
+        final expiration = data['expiration_setting'] as ExpirationSetting?;
 
         if (key != null && expiration != null) {
           _cache.changeExpiration(key, expiration);
@@ -88,9 +88,9 @@ class CacheAgent extends Agent {
 
         break;
       case ('update'):
-        var key = data['key'] as String?;
+        final key = data['key'] as String?;
 
-        var value = data['value'];
+        final value = data['value'];
 
         if (key != null) {
           _cache.update(key, value);
