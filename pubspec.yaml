@@ -1,5 +1,5 @@
 name: minerva_mcache
-description: A sample command-line application.
+description: Minerva agent for using mcache package between different server instances.
 version: 1.0.0
 homepage: https://github.com/GlebBatykov/minerva_mcache
 
